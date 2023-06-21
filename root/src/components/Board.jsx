@@ -3,11 +3,10 @@ import {
   PresentationControls,
   MeshReflectorMaterial,
 } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import Air from "../../Air";
 
 const Board = () => {
-  const gltf = useLoader(GLTFLoader, "./models/Airjordan.gltf");
+ 
   return (
     <PresentationControls
       speed={1.5}
@@ -17,7 +16,7 @@ const Board = () => {
     >
       <Stage environment={"city"} intensity={0.6} contactShadow={false} >
         <mesh>
-          <primitive object={gltf.scene} />
+       <Air />
         </mesh>
       </Stage>
 
