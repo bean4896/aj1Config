@@ -57,5 +57,6 @@ const Shoe = (props) => {
   );
 };
 
+
 useGLTF.preload("../models/Airjordan.gltf");
 export default Shoe;
