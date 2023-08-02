@@ -1,42 +1,54 @@
+// react three fiber documentation: https://github.com/pmndrs/drei#accumulativeshadows
+// https://codesandbox.io/s/environment-blur-and-transitions-forked-53lp2d?file=/src/App.js
+// https://codesandbox.io/s/stage-presets-forked-cg9vqm?file=/src/App.js
+// https://codesandbox.io/s/qxjoj?file=/src/App.js
+
+import { useState, useTransition } from 'react'
+import { Canvas } from "@react-three/fiber";
 import {
   Stage,
   PresentationControls,
   MeshReflectorMaterial,
+  AccumulativeShadows,
+  RandomizedLight,
+  Environment,
+  ContactShadows,
+  Backdrop
 } from "@react-three/drei";
 import Air from "../../Air";
 
-const Board = () => {
- 
-  return (
-    <PresentationControls
-      speed={1.5}
-      global
-      zoom={0.7}
-      polar={[-0.1, Math.PI / 4]}
-    >
-      <Stage environment={"city"} intensity={0.6} contactShadow={false} >
-        <mesh>
-       <Air />
-        </mesh>
-      </Stage>
+const Env = () => {
+  const [preset, setPreset] = useState('sunset');
+  return <Environment preset={preset} background={false} />
+};
 
-      {/* glass reflect plane */}
-      {/* <mesh rotation={[-Math.PI / 2, 0, 0]}>
-            <planeGeometry args={[170, 170]} />
-            <MeshReflectorMaterial
-              blur={[300, 100]}
-              resolution={2048}
-              mixBlur={1}
-              mixStrength={40}
-              roughness={1}
-              depthScale={1.2}
-              minDepthThreshold={0.4}
-              maxDepthThreshold={1.4}
-              color="#101010"
-              metalness={0.5}
-            />
-          </mesh> */}
-    </PresentationControls>
+const Board = () => {
+
+  return (
+    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, -1, 8], fov: 45 }}>
+      <PresentationControls
+        speed={1.5}
+        global
+        zoom={0.7}
+        polar={[-0.1, Math.PI / 4]}
+      >
+
+        <Stage
+          intensity={0.5}
+          preset="rembrandt"
+          shadows={{ type: 'accumulative', color: 'skyblue', colorBlend: 2, opacity: 1 }}
+          adjustCamera={1}
+          environment="city">
+
+          <Env />
+
+          <mesh castShadow receiveShadow>
+            <Air />
+          </mesh>
+          <ContactShadows opacity={0.5} scale={1} blur={500} far={1} color="#000000" />
+        </Stage>
+      </PresentationControls>
+    </Canvas>
   );
 };
 
