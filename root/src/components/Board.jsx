@@ -36,7 +36,7 @@ const Board = () => {
         preset="rembrandt"
         shadows={{ type: 'accumulative', color: '#f0f0f1', colorBlend: 2, opacity: 1 }}
         adjustCamera={1}
-        environment="city"
+        environment={null}
       >
 
         {/* mesh */}
