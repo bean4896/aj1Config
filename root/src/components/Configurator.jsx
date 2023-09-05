@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
+const Configurator = () => {
+    return (
+        <div className="configurator">
+            <button className='config_btn red' onClick={() => handleClick('red')}></button>
+            <button className='config_btn blue' onClick={() => handleClick('blue')}></button>
+            <button className='config_btn green' onClick={() => handleClick('green')}></button>
+        </div>
+    )
 
-const Configurator = ({ changeColor }) => {
-
-    const [currentColor, setCurrentColor] = useState('red'); // Initial color is red
-
-    const handleClick = (color) => {
-      setCurrentColor(color);
-      changeColor(color); // Pass the selected color to App.jsx
-    };
-
-    <div class="configurator">
-      <button onClick={() => handleClick('red')}>Red</button>
-      <button onClick={() => handleClick('blue')}>Blue</button>
-      <button onClick={() => handleClick('green')}>Green</button>
-    </div>
 }
 
 export default Configurator;

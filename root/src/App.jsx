@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Board />
       <Configurator />
-      <footer>Built by keyi</footer>
+      <footer>Fotttttt</footer>
     </div>
   );
 }
