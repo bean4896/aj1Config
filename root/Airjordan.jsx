@@ -11,7 +11,6 @@ const Shoe = (props) => {
 
   const XiemianTextureProps = useTexture({
     map: "../textures/xiemian/xiemian_red.jpg",
-    
   });
 
   XiemianTextureProps.map.repeat.set(0.1 ,0.1);

@@ -33,7 +33,7 @@ const Air = (props) => {
         </mesh>
 
         <mesh castShadow receiveShadow geometry={nodes.top.geometry} material={materials['mat_top.001']} position={[-1.935, 10.163, -138.758]}>
-          <meshStandardMaterial {...leatherProps} />
+          <meshToonMaterial attach="material" color={color} />
         </mesh>
 
         <mesh castShadow receiveShadow geometry={nodes.xieBang.geometry} material={materials['mat_xieBang.001']} position={[0.78, 45.375, -26.845]}>
