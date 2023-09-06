@@ -73,13 +73,22 @@ button:focus-visible {
   }
 }
 
-.configurator {
+.config_wrap {
   max-width: 500px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   font-weight: bold;
+}
+
+.configurator {
+  display: flex;
+  font-weight: bold;
+}
+
+.configurator.material {
+  align-items: left;
+  margin-bottom: 20px;
 }
 
 .config_btn {
@@ -89,10 +98,15 @@ button:focus-visible {
   border-radius: 50%;
   margin-right: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 0.4s ease-in-out;
+}
+
+.config_btn.btn_active {
+  border: 2px solid black;
 }
 
 .config_btn.green {
-  background-color: #37a000;
+  background-color: #038e42;
 }
 
 .config_btn.blue {
