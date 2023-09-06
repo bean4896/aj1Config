@@ -9,7 +9,6 @@ import {
   PresentationControls,
   Environment,
   OrbitControls,
-  RandomizedLight,
 } from "@react-three/drei";
 import Air from "../../Air";
 

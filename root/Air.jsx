@@ -15,12 +15,13 @@ const Air = (props) => {
   const { material, color } = useCustomization();
   const [useCustomMaterial, setUseCustomMaterial] = useState(true);
 
-  if (color) {
+  if (color || material) {
     useEffect(() => {
       console.log("useEffect triggered with color:", color);
+      console.log("useEffect triggered with material:", material);
       // 当颜色改变时，切换到标准材质
       setUseCustomMaterial(false);
-    }, [color]); // 在color改变时触发 
+    }, [color, material]); // 在color改变时触发 
   }
 
   const leatherProps = useTexture({
@@ -112,7 +113,6 @@ const Air = (props) => {
             <primitive object={standardMaterial} />
           )}
         </mesh>
-
       </group>
 
       <mesh castShadow receiveShadow geometry={nodes.line.geometry} material={materials.Lines} position={[-0.002, 0.731, 0.771]} rotation={[Math.PI / 2, 0, 0]} scale={0.01} />

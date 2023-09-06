@@ -11,12 +11,11 @@ function App() {
         <Configurator />
         <footer className="footer">
           <a href="http://keyi48.com/" target="_blank">
-        Built by keyi
+            Built by keyi
           </a>
         </footer>
       </div>
     </CustomizationProvider>
-
   );
 }
 
