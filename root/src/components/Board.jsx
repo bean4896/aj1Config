@@ -3,7 +3,6 @@
 // https://codesandbox.io/s/stage-presets-forked-cg9vqm?file=/src/App.js Robot
 // https://codesandbox.io/s/qxjoj?file=/src/App.js  Shoe
 
-import { useState } from 'react'
 import { Canvas } from "@react-three/fiber";
 import {
   Stage,
@@ -11,7 +10,6 @@ import {
   Environment,
   OrbitControls,
   RandomizedLight,
-  ContactShadows,
 } from "@react-three/drei";
 import Air from "../../Air";
 
@@ -30,7 +28,6 @@ const Board = () => {
         zoom={0.7}
         polar={[-0.1, Math.PI / 4]}
       > */}
-
         <Stage
           intensity={0.5}
           preset="rembrandt"
@@ -40,9 +37,9 @@ const Board = () => {
         >
 
           {/* mesh */}
-        <mesh castShadow receiveShadow>
-          <Air />
-        </mesh>
+          <mesh castShadow receiveShadow>
+            <Air />
+          </mesh>
 
           {/* lighting */}
         </Stage>
