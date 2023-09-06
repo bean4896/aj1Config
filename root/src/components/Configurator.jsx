@@ -8,8 +8,8 @@ const Configurator = () => {
     return (
         <div className='config_wrap'>
             <div className="configurator material">
-                <button className={`config_btn leather ${material === 'leather' ? "btn_active" : ""}`} onClick={() => setMaterial("leather")}>Leather</button>
-                <button className={`config_btn fabric ${material === 'fabric' ? "btn_active" : ""}`} onClick={() => setMaterial("fabric")}>fabric</button>
+                <button className={`config_btn mat leather ${material === 'leather' ? "btn_active" : ""}`} onClick={() => setMaterial("leather")}>Leather</button>
+                <button className={`config_btn mat fabric ${material === 'fabric' ? "btn_active" : ""}`} onClick={() => setMaterial("fabric")}>fabric</button>
             </div>
 
             <div className="configurator">
