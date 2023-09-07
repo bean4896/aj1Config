@@ -20,31 +20,32 @@ const Board = () => {
 
   return (
 
-      <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, -1, 8], fov: 35 }}>
-        {/* <PresentationControls
+    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, -1, 8], fov: 35 }}>
+      {/* <PresentationControls
         speed={1.5}
         global
         zoom={0.7}
         polar={[-0.1, Math.PI / 4]}
       > */}
-        <Stage
-          intensity={0.5}
-          preset="rembrandt"
-          shadows={{ type: 'accumulative', color: '#f0f0f1', colorBlend: 2, opacity: 1 }}
-          adjustCamera={1}
-          environment={null}
-        >
+      <Stage
+        intensity={0.5}
+        preset="rembrandt"
+        shadows={{ type: 'accumulative', color: '#f0f0f1', colorBlend: 2, opacity: 1 }}
+        adjustCamera={1}
+        environment={null}
+      >
 
-          {/* mesh */}
-          <mesh castShadow receiveShadow>
-            <Air />
-          </mesh>
+        {/* mesh */}
+        <mesh castShadow receiveShadow>
+          <Air />
+        </mesh>
 
-          {/* lighting */}
-        </Stage>
-        <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 1.9} makeDefault />
-        {/* </PresentationControls> */}
-      </Canvas>
+
+        {/* lighting */}
+      </Stage>
+      <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 1.9} makeDefault />
+      {/* </PresentationControls> */}
+    </Canvas>
 
   );
 };
