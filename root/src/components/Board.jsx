@@ -19,7 +19,7 @@ const Env = () => {
 const Board = () => {
 
   return (
-    <>
+
       <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, -1, 8], fov: 35 }}>
         {/* <PresentationControls
         speed={1.5}
@@ -45,7 +45,7 @@ const Board = () => {
         <OrbitControls minPolarAngle={0} maxPolarAngle={Math.PI / 1.9} makeDefault />
         {/* </PresentationControls> */}
       </Canvas>
-    </>
+
   );
 };
 

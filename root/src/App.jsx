@@ -9,11 +9,6 @@ function App() {
       <div className="App">
         <Board />
         <Configurator />
-        <footer className="footer">
-          <a href="http://keyi48.com/" target="_blank">
-            Built by keyi
-          </a>
-        </footer>
       </div>
     </CustomizationProvider>
   );

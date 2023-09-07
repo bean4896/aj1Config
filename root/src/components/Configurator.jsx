@@ -17,6 +17,12 @@ const Configurator = () => {
                 <button className={`config_btn blue ${color === '#619fdd' ? "btn_active" : ""}`} onClick={() => setColor('#619fdd')}></button>
                 <button className={`config_btn green ${color === '#038e42' ? "btn_active" : ""}`} onClick={() => setColor('#038e42')}></button>
             </div>
+
+            <div className='buildby'>
+          <a href="http://keyi48.com/" target="_blank">
+            Built by keyi
+          </a>
+        </div>
         </div>
     )
 }
