@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ColorRing } from 'react-loader-spinner'
+import { Triangle} from 'react-loader-spinner'
 
 const LoadingSpinner = () => {
     return (
@@ -13,15 +13,15 @@ const LoadingSpinner = () => {
                 zIndex: '9999', // Ensure it's above other content
             }}
         >
-            <ColorRing
-                visible={true}
-                height="80"
-                width="80"
-                ariaLabel="blocks-loading"
-                wrapperStyle={{}}
-                wrapperClass="blocks-wrapper"
-                colors={['#353535', '#535353', '#7e7f81', '#9b9ca0', '#bbbbbd']}
-            />
+<Triangle
+  height="100"
+  width="100"
+  color="#f1f1f1"
+  ariaLabel="triangle-loading"
+  wrapperStyle={{}}
+  wrapperClassName=""
+  visible={true}
+/>
         </div>
     );
 };
